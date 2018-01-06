@@ -1,0 +1,302 @@
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/**************************** Header ***************************/
+
+.header{
+  background: rgb(246, 246, 246);
+  padding: 1rem 0;
+  box-shadow: 0px 2px 5px #888888;
+}
+
+.header-content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-login form {
+  display: flex;
+  flex-direction: column;
+  min-width: 3rem;
+  /* height: 4rem; */
+}
+
+.log_in{
+  display: flex;
+}
+
+.log_in *{
+  flex-grow: 1;
+  font-size: 1rem;
+  padding: .3rem;
+}
+
+.log_in_btn{
+  border: .5px solid rgb(183, 184, 173);
+  transition: background .5s;
+  font-weight: bold;
+  text-align: center;
+  background: none;
+
+}
+
+
+.log_in_btn:hover{
+  cursor: pointer;
+  color: white;
+  background: rgb(50, 135, 246);
+}
+
+.username {
+  font-size: 1.5rem;
+  margin: auto;
+}
+
+.log_out_btn{
+  background: none;
+  border:none;
+}
+
+.log_out_btn:hover{
+  cursor: pointer;
+  color: rgb(38, 18, 148);
+  font-weight: bold;
+}
+/**************************** Cover ***************************/
+
+.cover-content{
+  margin-top: 1.5rem;
+  display: flex;
+}
+
+.cover-content section {
+  width: 50%;
+}
+
+.img-cover img{
+  display: block;
+  margin: 0 auto;
+}
+
+.text-cover h2 {
+  padding-top: 4rem;
+  font-weight: normal;
+  font-size: 5rem;
+}
+
+/**************************** Main ***************************/
+
+.error-content{
+  background: rgb(219, 66, 66);
+  color: rgb(255, 255, 255);
+  padding: .5rem
+}
+
+.main-content{
+  margin: 2rem 0 0 0 ;
+}
+
+.filter{
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter input{
+  font-size: 1.2rem;
+  padding: .5rem;
+  flex-grow: 2;
+}
+
+.filter select{
+  font-size: 1.2rem;
+  flex-grow: 1;
+}
+
+.todos{
+  margin: 2rem 0 0 0;
+}
+
+.todo_item{
+  padding: .5rem 0 .5rem 0;
+  transition: background .5s;
+  position: relative;
+  outline:none;
+
+}
+
+.todo_item:hover{
+  background: rgb(224, 224, 224);
+}
+
+.todo_item_info{
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo_item_group{
+  padding-left: 1rem;
+  margin: auto 0;
+}
+
+.todo_title{
+  font-size: 1.5rem;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.todo_date{
+  font-style: italic;
+}
+
+.todo_status{
+  padding-right: 1rem;
+}
+
+.modal{
+  position: absolute;
+  display: flex;
+  flex-flow: row-reverse;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+
+}
+
+.todo_btn{
+  font-size: 1.3rem;
+  font-weight: bold;
+  height: 50%;
+  min-width: 10rem;
+  margin: auto 1rem auto 1rem;
+  border-radius: 10px;
+  padding: .5rem;
+}
+
+.remove{
+  background: #D8002B;
+  color: white;
+  border: 2px solid #69200E;
+}
+
+.remove:hover{
+  cursor: pointer;
+  background: #82001A;
+}
+
+.update{
+  background: #00d716;
+  color: white;
+  border: 2px solid #1b690e;
+}
+
+.update:hover{
+  cursor: pointer;
+  background: #008A0E;
+}
+
+.save_todo_form{
+  margin: 1rem 0 3rem 0;
+  display: flex;
+}
+
+.save_todo_form input{
+  font-size: 1.2rem;
+  padding: .5rem;
+  flex-grow: 3;
+}
+
+.save_todo_form button{
+  flex-grow: 1;
+  font-size: 1.2rem;x
+}
+
+.add_todo_btn{
+  margin: 1rem 0 3rem 0;
+  border: .5px solid rgb(183, 184, 173);
+  border-radius: 10px;
+  padding: .5rem;
+  transition: background .5s;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  background: none;
+  font-size: 1.5rem;
+}
+
+.add_todo_btn:hover{
+  cursor: pointer;
+  color: white;
+  background: rgb(50, 135, 246);
+}
+
+/**************************** Queries ***************************/
+
+@media (max-width: 1200px) {
+  .text-cover h2 {
+    font-size: 4rem;
+  }
+
+  .img-cover img{
+    width: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .text-cover h2 {
+    font-size: 3.5rem;
+  }
+
+  .img-cover img{
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .cover-content{
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+
+  .cover-content section {
+    width: 100%;
+  }
+
+  .header-title{
+    font-size: 1.5rem;
+  }
+
+  .header-login{
+    width: 60%;
+  }
+
+  .filter{
+    flex-direction: column;
+  }
+
+  .filter select{
+    padding: .5rem;
+  }
+
+  .todo_btn{
+    font-size: 1rem;
+    min-width: 6rem;
+    border-radius: 10px;
+    padding: .5rem;
+  }
+}
