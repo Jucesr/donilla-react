@@ -9,7 +9,7 @@ import MainContainer from './components/MainContainer';
 
 export default class App extends React.Component {
   state = {
-    username: 'Julio',
+    username: '',
     error_message: ''
   }
 
